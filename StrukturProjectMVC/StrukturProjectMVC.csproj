@@ -54,7 +54,7 @@
     <Compile Include="Controller\MahasiswaController.cs" />
     <Compile Include="Model\Entity\Dosen.cs" />
     <Compile Include="Model\Entity\Mahasiswa.cs" />
-    <Compile Include="Model\Repository\DbContext.cs" />
+    <Compile Include="Model\Context\DbContext.cs" />
     <Compile Include="Model\Repository\DosenRepository.cs" />
     <Compile Include="Model\Repository\IBaseRepository.cs" />
     <Compile Include="Model\Repository\MahasiswaRepository.cs" />

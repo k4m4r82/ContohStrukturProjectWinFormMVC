@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.OleDb;
 
 using StrukturProjectMVC.Model.Entity;
+using StrukturProjectMVC.Model.Context;
 
 namespace StrukturProjectMVC.Model.Repository
 {

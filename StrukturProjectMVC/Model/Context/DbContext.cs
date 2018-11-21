@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StrukturProjectMVC.Model.Repository
+namespace StrukturProjectMVC.Model.Context
 {
     public interface IDbContext : IDisposable
     {

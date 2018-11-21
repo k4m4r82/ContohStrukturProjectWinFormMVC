@@ -1,11 +1,13 @@
-﻿using StrukturProjectMVC.Model.Entity;
-using StrukturProjectMVC.Model.Repository;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
+using StrukturProjectMVC.Model.Entity;
+using StrukturProjectMVC.Model.Context;
+using StrukturProjectMVC.Model.Repository;
 
 namespace StrukturProjectMVC.Controller
 {
@@ -17,7 +19,7 @@ namespace StrukturProjectMVC.Controller
 
     public class MahasiswaController : IMahasiswaController
     {
-        private IMahasiswaRepository _repo;
+        private IMahasiswaRepository _repository;
 
         public int Delete(Mahasiswa obj)
         {
@@ -30,8 +32,8 @@ namespace StrukturProjectMVC.Controller
 
             using (IDbContext context = new DbContext())
             {
-                _repo = new MahasiswaRepository(context);
-                listOfMahasiswa = _repo.GetAll().ToList();
+                _repository = new MahasiswaRepository(context);
+                listOfMahasiswa = _repository.GetAll().ToList();
             }
 
             return listOfMahasiswa;
@@ -48,8 +50,8 @@ namespace StrukturProjectMVC.Controller
 
             using (IDbContext context = new DbContext())
             {
-                _repo = new MahasiswaRepository(context);
-                listOfMahasiswa = _repo.GetByName(name).ToList();
+                _repository = new MahasiswaRepository(context);
+                listOfMahasiswa = _repository.GetByName(name).ToList();
             }
 
             return listOfMahasiswa;
@@ -67,8 +69,8 @@ namespace StrukturProjectMVC.Controller
 
             using (IDbContext context = new DbContext())
             {
-                _repo = new MahasiswaRepository(context);
-                result = _repo.Save(obj);
+                _repository = new MahasiswaRepository(context);
+                result = _repository.Save(obj);
             }
 
             return result;
